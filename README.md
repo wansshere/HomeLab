@@ -31,7 +31,7 @@ Replaced stock Android with **Armbian OS (v25.05.0)** built for Amlogic S905X. F
 
 Getting it to boot was a bit of a journey — the STB defaults to booting Android and ignores external storage unless you force it. A `reboot update` command from Android's terminal emulator does the trick, which tells the bootloader to check external storage on the next boot.
 
-> If you're trying to do the same thing and hit a `DDR_ENC.USB` error or end up with a bricked device, I wrote a separate guide for that: [amlogic-s905x-unbrick](https://github.com/WanzzNeverSleep/docs/amlogic-s905x-DDR-ENC-error.md)
+> If you're trying to do the same thing and hit a `DDR_ENC.USB` error or end up with a bricked device, I wrote a separate guide for that: [amlogic-s905x-unbrick](https://github.com/WanzzNeverSleep/HomeLab/blob/47c6aa004adcf229894f1c6b43566f22db5d5f12/docs/amlogic-s905x-DDR-ENC-error.md)
 
 ---
 
@@ -171,4 +171,4 @@ Both services are now accessible from anywhere through Cloudflare Tunnel:
 
 ## Related
 
-- [amlogic-s905x-unbrick](https://github.com/WanzzNeverSleep/HomeLab/tree/47c6aa004adcf229894f1c6b43566f22db5d5f12/docs) — Recovery guide for bricked HG680P and other Amlogic S905X devices
+- [amlogic-s905x-unbrick](https://github.com/WanzzNeverSleep/HomeLab/blob/47c6aa004adcf229894f1c6b43566f22db5d5f12/docs/amlogic-s905x-DDR-ENC-error.md) — Recovery guide for bricked HG680P and other Amlogic S905X devices
