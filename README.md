@@ -171,4 +171,4 @@ Both services are now accessible from anywhere through Cloudflare Tunnel:
 
 ## Related
 
-- [amlogic-s905x-unbrick](https://github.com/WanzzNeverSleep/docs/amlogic-s905x-DDR-ENC-error.md) — Recovery guide for bricked HG680P and other Amlogic S905X devices
+- [amlogic-s905x-unbrick]([https://github.com/WanzzNeverSleep/docs/amlogic-s905x-DDR-ENC-error.md](https://github.com/WanzzNeverSleep/HomeLab/tree/47c6aa004adcf229894f1c6b43566f22db5d5f12/docs)) — Recovery guide for bricked HG680P and other Amlogic S905X devices
