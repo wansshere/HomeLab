@@ -69,6 +69,21 @@ sudo systemctl start cloudflared
 
 ---
 
+## Private Admin Access — Tailscale VPN
+
+I decided to lock down SSH and the web management interface (CasaOS) so they are only accessible by me as the admin. To do this, I set up **Tailscale** as a private VPN connecting my laptop directly to the server. This way, I can manage and access my server from anywhere without worrying about unauthorized access from the public internet.
+
+```bash
+# Install Tailscale
+curl -fsSL [https://tailscale.com/install.sh](https://tailscale.com/install.sh) | sh
+
+# Start Tailscaled service
+sudo systemctl start tailscaled.service
+
+# Connect the server to my Tailnet
+sudo tailscale up
+```
+
 ## Self-Hosted Cloud — Nextcloud + MariaDB + Redis
 
 My main use case. I don't love having my files on Google Drive or iCloud, so I run Nextcloud on the HDD for storage.
@@ -149,12 +164,10 @@ nano ~/docker/nextcloud/nextcloud/config/config.php
   ),
 ```
 
-### Result
+### Access Architecture
 
-Both services are now accessible from anywhere through Cloudflare Tunnel:
-
-- **CasaOS:** `casa.wanzz.my.id`
-- **Nextcloud:** `cld.wanzz.my.id`
+- **Public Access (`cld.wanzz.my.id`):** Nextcloud is routed through **Cloudflare Tunnel** so I can access my files from any device.
+- **Admin-Only Access (`100.x.y.z`):** CasaOS and SSH are isolated behind **Tailscale VPN**, accessible only from my authenticated devices.
 
 ---
 
